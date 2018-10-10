@@ -1,0 +1,41 @@
+<ion-menu [content]="menu">
+    <ion-header>
+        <ion-navbar>
+            <ion-title>EventosCZ</ion-title>
+        </ion-navbar>
+    </ion-header>
+
+    <ion-content>
+        <ion-list>
+            <button ion-item menuClose (click)="openPage(maps)">
+                <ion-icon ios="ios-locate" md="md-locate" item-start large></ion-icon>
+                Mapa
+            </button>
+            <button ion-item menuClose (click)="openPage(programacao)">
+                <ion-icon ios="ios-calendar" md="md-calendar" item-start large></ion-icon>
+                Programação
+            </button>
+            <button ion-item menuClose (click)="openPage(divulgaEvento)">
+                <ion-icon ios="ios-create" md="md-create" item-start large></ion-icon>
+                Divulgue seu evento
+            </button>
+            <button ion-item menuClose (click)="openPage(equipe)">
+                <ion-icon ios="ios-information-circle" md="md-information-circle" item-start large>
+                </ion-icon>
+                Nossa Equipe
+            </button>
+        </ion-list>
+        <ion-footer>
+            <ion-toolbar>
+                <img id="logo" src="assets/imgs/a.png"/>
+                <ion-item>
+                    <ion-icon (click)="openBrowser('https://m.facebook.com/loopisjr')" color="primary" item-start large ios="logo-facebook" md="logo-facebook"></ion-icon>
+                    <ion-icon (click)="openBrowser('https://github.com/loopisjr')" color="dark" item-start large ios="logo-github" md="logo-github"></ion-icon>
+                    <ion-icon (click)="openBrowser('https://www.instagram.com/loopisjr/')" color="primary" item-start ios="logo-instagram" md="logo-instagram"></ion-icon>                    
+                    <ion-icon (click)="openBrowser('https://loopisjr.github.io/')" color="secondary" item-start ios="ios-globe" md="md-globe"></ion-icon>
+                </ion-item>
+            </ion-toolbar>
+        </ion-footer>
+    </ion-content>
+</ion-menu>
+<ion-nav #menu [root]="rootPage"></ion-nav>

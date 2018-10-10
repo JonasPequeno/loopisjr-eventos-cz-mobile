@@ -1,0 +1,49 @@
+.background{
+    background-color: #00aebf;
+}
+.bold{
+    font-size: bold;
+}
+.transparente {
+    background-color: transparent;
+}
+
+//alinhamento
+.center {
+    text-align: center;
+}
+
+//margens pre definidas
+
+.no-margin {
+    margin: 0px;
+}
+.mg-top-5 {
+    margin-top: 5px;
+}
+.mg-top-20 {
+    margin-top: 30px;
+}
+.mg-top-30 {
+    margin-top: 30px;
+}
+.mg-top-40 {
+    margin-top: 40px;
+}
+
+.corBranca {
+    color: white !important;    
+}
+.quebraLinha {
+    white-space: normal;
+    display: block;;
+}
+
+
+#logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 20%;
+}

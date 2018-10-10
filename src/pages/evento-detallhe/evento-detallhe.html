@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Detalhes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="background">
+  <ion-card>
+    <img class="mg-top-10" src="{{evento.foto.i}}" />
+    <ion-card-content>
+      <ion-card-title class="center bold">
+        {{evento.nome}}
+      </ion-card-title>
+      <ion-item>
+        <ion-icon item-start color="primary" ios="ios-calendar" md="md-calendar"></ion-icon>
+        <ion-label>Data : {{evento.data}}</ion-label>
+
+      </ion-item>
+      <ion-item>
+        <ion-icon item-start color="secondary" ios="ios-time" md="md-time"></ion-icon>
+        <ion-label>Hora de Inicio : {{evento.hora}}h</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon color="BondiBlue" item-start ios="logo-usd" md="logo-usd"></ion-icon>
+        <p>Meia :{{evento.preco.meia}} R$</p>
+        <p>Inteira :{{evento.preco.inteira}} R$</p>
+      </ion-item>
+      <ion-item>
+        <ion-icon color="danger" item-start ios="ios-alert" md="md-alert"></ion-icon>
+        <ion-label> Classificação : {{evento.classificacao}} anos</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
