@@ -18,23 +18,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the ErroPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 var ErroPage = /** @class */ (function () {
     function ErroPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
     }
     ErroPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ErroPage');
     };
     ErroPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-erro',template:/*ion-inline-start:"/home/jonas/eventosCZ/loopisjr-eventos-cz-mobile/src/pages/erro/erro.html"*/'<!--\n  Generated template for the ErroPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Erro na conexão</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <h1>\n    Sem conexão com a Internet. O WI-FI ou os dados da rede celular devem estar ativos. Tente novamente.\n  </h1>\n</ion-content>'/*ion-inline-end:"/home/jonas/eventosCZ/loopisjr-eventos-cz-mobile/src/pages/erro/erro.html"*/,
+            selector: 'page-erro',template:/*ion-inline-start:"/home/jonas/eventosCZ/loopisjr-eventos-cz-mobile/src/pages/erro/erro.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Erro na conexão</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content class="background">\n  <h1 class="corBranca">\n    Sem conexão com a Internet. O WI-FI ou os dados da rede celular devem estar ativos. Tente novamente.\n  </h1>  \n</ion-content>'/*ion-inline-end:"/home/jonas/eventosCZ/loopisjr-eventos-cz-mobile/src/pages/erro/erro.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], ErroPage);
@@ -264,9 +257,6 @@ var AboutPage = /** @class */ (function () {
         this.toast = toast;
         this.verMais = false;
     }
-    AboutPage.prototype.mostra = function () {
-        this.verMais = !this.verMais;
-    };
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-about',template:/*ion-inline-start:"/home/jonas/eventosCZ/loopisjr-eventos-cz-mobile/src/pages/about/about.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button icon-only menuToggle>\n            <ion-icon name="menu"></ion-icon>\n        </button>\n        <ion-title>Nossa Equipe</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding class="background">\n    <img src="assets/imgs/teatroSobre.jpg"/>\n    <ion-card class="transparente">        \n        <ion-card-content class="center mg-top-20" color="light">\n            <ion-label class="mg-top-5">SOBRE </ion-label> <br>\n            Cajazeira Produtora Cultural é uma empresa no ramo de entretenimento\n            que busca contribuir com a arte e a cultura da Cidade e Região. <br>\n        </ion-card-content>\n    </ion-card>\n</ion-content>'/*ion-inline-end:"/home/jonas/eventosCZ/loopisjr-eventos-cz-mobile/src/pages/about/about.html"*/
@@ -647,7 +637,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/jonas/eventosCZ/loopisjr-eventos-cz-mobile/src/app/app.html"*/'<ion-menu [content]="menu">\n    <ion-header>\n        <ion-navbar>\n            <ion-title>EventosCZ</ion-title>\n        </ion-navbar>\n    </ion-header>\n\n    <ion-content>\n        <ion-list>\n            <button ion-item menuClose (click)="openPage(maps)">\n                <ion-icon ios="ios-locate" md="md-locate" item-start large></ion-icon>\n                Mapa\n            </button>\n            <button ion-item menuClose (click)="openPage(programacao)">\n                <ion-icon ios="ios-calendar" md="md-calendar" item-start large></ion-icon>\n                Programação\n            </button>\n            <button ion-item menuClose (click)="openPage(divulgaEvento)">\n                <ion-icon ios="ios-create" md="md-create" item-start large></ion-icon>\n                Divulgue seu evento\n            </button>\n            <button ion-item menuClose (click)="openPage(equipe)">\n                <ion-icon ios="ios-information-circle" md="md-information-circle" item-start large>\n                </ion-icon>\n                Nossa Equipe\n            </button>\n        </ion-list>\n        <ion-footer>\n            <ion-toolbar>\n                <img id="logo" src="assets/imgs/a.png"/>\n                <ion-item>\n                    <ion-icon (click)="openBrowser(\'https://m.facebook.com/loopisjr\')" color="primary" item-start large ios="logo-facebook" md="logo-facebook"></ion-icon>\n                    <ion-icon (click)="openBrowser(\'https://github.com/loopisjr\')" color="dark" item-start large ios="logo-github" md="logo-github"></ion-icon>\n                    <ion-icon (click)="openBrowser(\'https://www.instagram.com/loopisjr/\')" color="primary" item-start ios="logo-instagram" md="logo-instagram"></ion-icon>                    \n                    <ion-icon (click)="openBrowser(\'https://loopisjr.github.io/\')" color="secondary" item-start ios="ios-globe" md="md-globe"></ion-icon>\n                </ion-item>\n            </ion-toolbar>\n        </ion-footer>\n    </ion-content>\n</ion-menu>\n<ion-nav #menu [root]="rootPage"></ion-nav>'/*ion-inline-end:"/home/jonas/eventosCZ/loopisjr-eventos-cz-mobile/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/jonas/eventosCZ/loopisjr-eventos-cz-mobile/src/app/app.html"*/'<ion-menu [content]="menu">\n    <ion-header>\n        <ion-navbar>\n            <ion-title>EventosCZ</ion-title>\n        </ion-navbar>\n    </ion-header>\n\n    <ion-content>\n        <ion-list>\n            <button ion-item menuClose (click)="openPage(maps)">\n                <ion-icon ios="ios-locate" md="md-locate" item-start large></ion-icon>\n                Mapa\n            </button>\n            <button ion-item menuClose (click)="openPage(programacao)">\n                <ion-icon ios="ios-calendar" md="md-calendar" item-start large></ion-icon>\n                Programação\n            </button>\n            <button ion-item menuClose (click)="openPage(divulgaEvento)">\n                <ion-icon ios="ios-create" md="md-create" item-start large></ion-icon>\n                Divulgue seu evento\n            </button>\n            <button ion-item menuClose (click)="openPage(equipe)">\n                <ion-icon ios="ios-information-circle" md="md-information-circle" item-start large>\n                </ion-icon>\n                Nossa Equipe\n            </button>\n        </ion-list>\n        <ion-footer>\n            <ion-toolbar>\n                <img id="logo" src="assets/imgs/a.png"/>\n                <ion-item>\n                    <ion-icon (click)="openBrowser(\'https://m.facebook.com/loopisjr\')"  item-start large ios="logo-facebook" md="logo-facebook"></ion-icon>\n                    <ion-icon (click)="openBrowser(\'https://github.com/loopisjr\')"  item-start large ios="logo-github" md="logo-github"></ion-icon>\n                    <ion-icon (click)="openBrowser(\'https://www.instagram.com/loopisjr/\')"  item-start large ios="logo-instagram" md="logo-instagram"></ion-icon>                                        \n                </ion-item>\n            </ion-toolbar>\n        </ion-footer>\n    </ion-content>\n</ion-menu>\n<ion-nav #menu [root]="rootPage"></ion-nav>'/*ion-inline-end:"/home/jonas/eventosCZ/loopisjr-eventos-cz-mobile/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],

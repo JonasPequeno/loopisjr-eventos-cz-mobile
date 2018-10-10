@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { EventoDetallhePage } from '../evento-detallhe/evento-detallhe';
 import { EventoProvider } from '../../providers/evento/evento';
-import { Observable } from 'rxjs/Observable';
+
 @IonicPage()
 @Component({
   selector: 'page-programacao',

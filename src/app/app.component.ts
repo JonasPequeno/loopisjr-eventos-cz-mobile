@@ -50,7 +50,7 @@ export class MyApp {
     this.initializeApp()
   }
 
-  initializeApp() {    
+  initializeApp() {
     this.platform.ready().then(() => {
       this.verificaConexao();
       this.screen.lock(this.screen.ORIENTATIONS.PORTRAIT);
@@ -72,12 +72,12 @@ export class MyApp {
         subTitle: 'Verifique sua conexão com a internet!',
         buttons: ['Ok']
       });
-      alert.present();    
+      alert.present();
       this.rootPage = this.erro;
     })
 
     this.network.onConnect().subscribe(() => {
-      this.rootPage =  HomePage;
+      this.rootPage = HomePage;
     })
   }
   openBrowser(url) {

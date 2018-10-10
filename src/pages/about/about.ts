@@ -13,8 +13,4 @@ export class AboutPage {
   constructor(public navCtrl: NavController, public network : Network, public toast : ToastController) {    
   }
 
-  mostra() {
-    this.verMais = !this.verMais;
-  }
-
 }
