@@ -11,14 +11,16 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 
-
 //pages 
 import { AboutPage } from '../pages/about/about';
 //import { EventoDetallhePage } from '../pages/evento-detallhe/evento-detallhe'
 import { EventosPage } from '../pages/eventos/eventos';
 import { HomePage } from '../pages/home/home';
 import { ProgramacaoPage } from '../pages/programacao/programacao';
+import { ErroPage } from '../pages/erro/erro';
 
+declare var navigator: any;
+declare var Connection: any;
 
 @Component({
   templateUrl: 'app.html'
@@ -31,6 +33,7 @@ export class MyApp {
   private divulgaEvento = EventosPage;
   private maps = HomePage;
   private equipe = AboutPage;
+  private erro = ErroPage;
 
   constructor(
     public platform: Platform,
@@ -40,16 +43,17 @@ export class MyApp {
     private toast: ToastController,
     private screen: ScreenOrientation,
     private iab: InAppBrowser,
+    public alertCtrl: AlertController
 
   ) {
+    this.verificaConexao();
     this.initializeApp()
   }
 
-  initializeApp() {
+  initializeApp() {    
     this.platform.ready().then(() => {
-
-      this.screen.lock(this.screen.ORIENTATIONS.PORTRAIT);
       this.verificaConexao();
+      this.screen.lock(this.screen.ORIENTATIONS.PORTRAIT);
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
@@ -61,24 +65,20 @@ export class MyApp {
 
   verificaConexao() {
 
-    this.network.onConnect().subscribe(() => {
-
-      this.toast.create({
-        message: `Você está conectado em ${this.network.type}.`,
-        duration: 4000,
-      }).present();
-
-    })
-
     this.network.onDisconnect().subscribe(() => {
 
-      let to = this.toast.create({
-        message: "Você está desconectado.",
-        duration: 5000,
-        position: 'middle'
-      }).present();
+      const alert = this.alertCtrl.create({
+        title: 'Você está desconectado',
+        subTitle: 'Verifique sua conexão com a internet!',
+        buttons: ['Ok']
+      });
+      alert.present();    
+      this.rootPage = this.erro;
     })
 
+    this.network.onConnect().subscribe(() => {
+      this.rootPage =  HomePage;
+    })
   }
   openBrowser(url) {
     let browser = this.iab.create(url, '_blank', { location: 'no', zoom: 'no' })

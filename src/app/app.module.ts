@@ -14,6 +14,7 @@ import { EventoDetallhePage } from '../pages/evento-detallhe/evento-detallhe'
 import { EventosPage } from '../pages/eventos/eventos';
 import { HomePage } from '../pages/home/home';
 import { ProgramacaoPage } from '../pages/programacao/programacao';
+import { ErroPage } from '../pages/erro/erro';
 
 //provides 
   import { EventoProvider } from '../providers/evento/evento';
@@ -29,7 +30,8 @@ import { ProgramacaoPage } from '../pages/programacao/programacao';
     EventoDetallhePage,
     EventosPage,
     HomePage,
-    ProgramacaoPage
+    ProgramacaoPage,
+    ErroPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { ProgramacaoPage } from '../pages/programacao/programacao';
     EventoDetallhePage,
     EventosPage,
     HomePage,
-    ProgramacaoPage
+    ProgramacaoPage,
+    ErroPage
   ],
   providers: [
     StatusBar,
