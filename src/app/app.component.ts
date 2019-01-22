@@ -35,6 +35,8 @@ export class MyApp {
   private equipe = AboutPage;
   private erro = ErroPage;
 
+  private mostraMenu : Boolean = true;
+
   constructor(
     public platform: Platform,
     public statusBar: StatusBar,
@@ -46,7 +48,7 @@ export class MyApp {
     public alertCtrl: AlertController
 
   ) {
-    this.verificaConexao();
+    //this.verificaConexao();
     this.initializeApp()
   }
 
@@ -74,10 +76,12 @@ export class MyApp {
       });
       alert.present();
       this.rootPage = this.erro;
+      this.mostraMenu = false;
     })
 
     this.network.onConnect().subscribe(() => {
       this.rootPage = HomePage;
+      this.mostraMenu = true;
     })
   }
   openBrowser(url) {
